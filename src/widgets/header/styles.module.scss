@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  height: 70px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: #3b3b3b;
+  border-radius: 10px;
+
+  &:focus {
+    border: 1px solid #fff;
+  }
+}
+
+.logout {
+  margin-left: auto;
+}
