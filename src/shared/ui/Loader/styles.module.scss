@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+}
+
+.icon {
+  animation-duration: 3s;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  margin-bottom: 30px;
+}
+
+.text {
+  font-size: 36px;
+  line-height: 47px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

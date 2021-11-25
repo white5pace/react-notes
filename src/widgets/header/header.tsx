@@ -2,6 +2,7 @@ import styles from './styles.module.scss'
 import { Link } from 'react-router-dom'
 import Typography from 'shared/ui/Typography/index'
 import Avatar from 'shared/ui/Avatar/index'
+import NoteMenu from 'entities/note-menu/index'
 
 export const Header = () => {
     return (
@@ -25,7 +26,7 @@ export const Header = () => {
                     <Typography className={styles.logo}>Notes</Typography>
             }
             {
-                window.location.pathname !== '/' ? 'kus' : <Avatar />
+                window.location.pathname !== '/' ? <NoteMenu/> : <Avatar />
             }
         </div>
     )

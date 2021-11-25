@@ -8,6 +8,7 @@ export interface Note {
     content: string
     color: string
     date: Date
+    pinned: boolean
 }
 
 export const notesListChanged = createEvent<Note[]>()
@@ -18,8 +19,6 @@ const $notesListLocalStorage = connectLocalStorage('$notesList')
 
 export const $notesList = createStore<Note[]>($notesListLocalStorage.init([]))
     .on(notesListChanged, (state, value) => value)
-
-$notesList.watch(console.log)
 
 $notesList.watch($notesListLocalStorage)
 
@@ -49,3 +48,7 @@ export const $loadedNotes = createStore<Note[]>([]).on(
     getNotesListFx.doneData,
     (_, payload) => payload,
 )
+
+export const $pinnedNotes = $loadedNotes.map(notes => notes.filter(note => note.pinned))
+
+export const $unpinnedNotes = $loadedNotes.map(notes => notes.filter(note => !note.pinned))

@@ -2,6 +2,14 @@
   padding: 20px 0;
 }
 
+.pined, .upcoming {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: #B7B7B7;
+  margin: 15px 0;
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;

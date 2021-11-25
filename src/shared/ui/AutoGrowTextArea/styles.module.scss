@@ -1,6 +1,5 @@
 .area {
-  resize: none;
+  resize: none !important;
   overflow: hidden;
   min-height: 50px;
-  max-height: 100px;
 }
